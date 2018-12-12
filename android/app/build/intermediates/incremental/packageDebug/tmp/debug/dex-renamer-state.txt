@@ -1,0 +1,4 @@
+#Thu Dec 06 23:54:20 AMT 2018
+base.0=/home/thiago/Área de Trabalho/Cabos/cabos/android/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex

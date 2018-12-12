@@ -1,0 +1,3 @@
+rootProject.name = 'cabos'
+
+include ':app'
