@@ -35,7 +35,8 @@ export default class Login extends Component {
              placeholder = 'Password'
              underlineColorAndroid = 'rgba(0,0,0,0)'           
           />
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity style={styles.button}
+             onPress={() => this.props.navigation.navigate('Lista')}>
             <Text style={styles.buttonText}>Entrar</Text>
           </TouchableOpacity>
           <View style = {styles.signupTextCont}>
@@ -59,7 +60,7 @@ const styles = StyleSheet.create({
 
   },
   background:{
-      width: 430, height: 250
+      width: 430, height: 200
   },
   inputBox:{
     width: 250,
@@ -68,7 +69,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     fontSize: 16,
     color: 'black',
-    marginVertical: 10,
+    marginVertical: 5,
     borderWidth: 2, 
   },
   button:{
@@ -84,7 +85,7 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     color: '#ffffff',
     textAlign: 'center',
-    marginVertical: 16,
+    marginVertical: 10,
   
   },
   signupTextCont:{
@@ -97,7 +98,7 @@ const styles = StyleSheet.create({
     height: 50,
     backgroundColor: '#026093',
     borderRadius: 25,
-    marginVertical: 70,
+    marginVertical: 10,
     
   }, 
 

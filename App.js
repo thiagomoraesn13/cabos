@@ -13,6 +13,9 @@ import Lista from './Lista'
 import Informacoes from './Informacoes'
 
 const App = StackNavigator({
+  Login: {
+    screen: Login
+  },
   Lista:{
     screen: Lista
   },
@@ -22,11 +25,6 @@ const App = StackNavigator({
   Produt:{
     screen: Produt
   },
-
-  Login: {
-    screen: Login
-  },
-
   Cadastro:{
     screen: Cadastro
   },

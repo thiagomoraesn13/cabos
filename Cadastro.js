@@ -35,7 +35,9 @@ export default class Login extends Component {
              placeholder = 'Confirme sua senha'
              underlineColorAndroid = 'rgba(0,0,0,0)'           
           />
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity 
+             style={styles.button}
+             onPress={() => this.props.navigation.navigate('Lista')}>
             <Text style={styles.buttonText}>Entrar</Text>
           </TouchableOpacity>
         </View>   

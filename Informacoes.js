@@ -18,84 +18,27 @@ export default class Informacoes extends Component {
   static navigationOptions = {
      title: 'Informacoes'
     } 
-
-// constructor(){
-//     super();
-//     this.state = {
-//         data : null
-//     }
-// }
-
 state = {
     data: null
 }
 
 componentDidMount() {
   const params  = this.props.navigation.state.params
-  fetch(`https://paracabos-teste.herokuapp.com/produtos/1`)
+ // fetch(`https://paracabos-teste.herokuapp.com/produtos/1`)
   
- //  fetch("https://paracabos-teste.herokuapp.com/produtos/"+params.id)
+   fetch("https://paracabos-teste.herokuapp.com/produtos/"+params.id)
   .then(response => response.json())
   .then(response => this.setState({ data: response }))
   .catch(error => console.warn('errorsan' + error.error));
 }
-
-// //   render() {
-// //     return (
-        
-// //         <View style={styles.container}>
-// //          <Text style = {styles.itemText}>{this.data.nome}</Text>
-// //         {/* <Text style = {styles.itemText}>{params.id.outro_param}</Text>
-// //          */}
-// //         </View>
-// //       );
-// //     }
-// // }
-// renderItem = ({ item, index }) => {
-
-//     if(item.id !== 0){
-//     return (
-      
-//       <View style={styles.item}> 
-//         <Text style={styles.itemText}>{item.id}</Text>
-//       </View>
-     
-    
-//     );
-//     }
-//   };
-
-//     render() {
-//         return (
-//             <View style={styles.container}>
-//               {this.state.data ?
-//                 <FlatList
-//                   renderItem={this.renderItem}
-//                   style={styles.container}
-//                   keyExtractor={(_, index) => index}
-//                   numColumns={1}
-//                   />:null}
-//                 </View> 
-//           );
-//         }
-// }
-
-
-// componentWillMount(){
-//     this.fetchData();
-// }
-
-// fetchData = async () => {
-//     const params  = this.props.navigation.state.params
-//     const response = await fetch("https://paracabos-teste.herokuapp.com/produtos/1");
-//     const json = await response.json();
-//     this.setState({data: json});
-// }
   render() {
     if (this.state.data !== null){
         var component = ([
-        <Text> nome: {this.state.data.nome}</Text>,  
-        <Text> id: {this.state.data.id}</Text>
+        <Text style={styles.itemText}>Nome do Produto: {this.state.data.nome}</Text>,  
+        <Text style={styles.itemText}>Marca: {this.state.data.marca}</Text>,
+        <Text style={styles.itemText}>Descrição: {this.state.data.descricao}</Text>,
+        
+
          ] )
     }
     return (
